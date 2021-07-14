@@ -1,6 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 const { error } = require('./services/messages/error');
+const cursosRouter = require('./routes/cursos.routes');
 const app = express();
 
 app.use(express.json());
@@ -10,6 +11,8 @@ app.use(
     })
 );
 app.use(logger('dev'));
+
+app.use('/cursos', cursosRouter);
 
 app.use((req, res) => {
     error(res, 'Bad request');
