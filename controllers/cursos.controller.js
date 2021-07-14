@@ -1,5 +1,8 @@
+const { cursosList } = require('../services/cursos.services');
+
 const getCursos = (req, res) => {
-    res.send('Prueba desde controller');
+    const cursos = cursosList();
+    res.json({ cursos });
 };
 
 module.exports = { getCursos };
