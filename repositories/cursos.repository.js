@@ -6,7 +6,7 @@ const getCursosEspecialidades = async () => {
 };
 
 const getCursoEspecialidades = async (id) => {
-    const cursos = await especialidades.find({ id });
+    const cursos = await especialidades.findOne({ id });
     return cursos;
 };
 
