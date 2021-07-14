@@ -28,7 +28,7 @@ const cursoSchema = new Schema({
         required: true,
     },
     dias: {
-        type: String,
+        type: Array,
         required: true,
     },
     certificacion: {
