@@ -5,4 +5,9 @@ const getCursosEspecialidades = async () => {
     return cursos;
 };
 
-module.exports = { getCursosEspecialidades };
+const getCursoEspecialidades = async (id) => {
+    const cursos = await especialidades.find({ id });
+    return cursos;
+};
+
+module.exports = { getCursosEspecialidades, getCursoEspecialidades };
