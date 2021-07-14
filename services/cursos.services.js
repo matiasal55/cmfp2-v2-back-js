@@ -1,7 +1,7 @@
 const { getCursos } = require('../repositories/cursos.repository');
 
-const cursosList = () => {
-    const cursos = getCursos();
+const cursosList = async () => {
+    const cursos = await getCursos();
     return cursos;
 };
 

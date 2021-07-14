@@ -1,7 +1,7 @@
 const { cursosList } = require('../services/cursos.services');
 
-const getCursos = (req, res) => {
-    const cursos = cursosList();
+const getCursos = async (req, res) => {
+    const cursos = await cursosList();
     res.json({ cursos });
 };
 

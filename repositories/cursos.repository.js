@@ -1,5 +1,7 @@
-const getCursos = () => {
-    const cursos = { texto: 'Prueba desde repository' };
+const especialidades = require('../models/Especialidades');
+
+const getCursos = async () => {
+    const cursos = await especialidades.find();
     return cursos;
 };
 
