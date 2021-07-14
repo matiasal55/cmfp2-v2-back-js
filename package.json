@@ -4,8 +4,8 @@
   "description": "Repositorio modelo para hacer backend con Node y Express",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon",
-    "build":"node index"
+    "dev": "nodemon",
+    "build": "node index"
   },
   "keywords": [
     "express",
@@ -15,7 +15,8 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
