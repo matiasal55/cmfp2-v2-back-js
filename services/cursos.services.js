@@ -1,7 +1,8 @@
+const { getCursos } = require('../repositories/cursos.repository');
+
 const cursosList = () => {
-    return {
-        texto: 'Prueba',
-    };
+    const cursos = getCursos();
+    return cursos;
 };
 
 module.exports = { cursosList };
