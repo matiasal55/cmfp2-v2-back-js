@@ -5,4 +5,9 @@ const getNoticias = async () => {
     return noticias;
 };
 
-module.exports = { getNoticias };
+const getUltimasNoticias = async () => {
+    const noticias = Model.find().sort({ _id: 1 }).limit(3);
+    return noticias;
+};
+
+module.exports = { getNoticias, getUltimasNoticias };

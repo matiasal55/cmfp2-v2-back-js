@@ -1,8 +1,13 @@
-const { getNoticias } = require('../repositories/noticias.repository');
+const { getNoticias, getUltimasNoticias } = require('../repositories/noticias.repository');
 
 const noticiasList = async () => {
     const noticias = await getNoticias();
     return noticias;
 };
 
-module.exports = { noticiasList };
+const noticiasLastItems = async () => {
+    const noticias = await getUltimasNoticias();
+    return noticias;
+};
+
+module.exports = { noticiasList, noticiasLastItems };
