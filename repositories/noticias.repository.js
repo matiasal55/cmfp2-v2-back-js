@@ -10,4 +10,9 @@ const getUltimasNoticias = async () => {
     return noticias;
 };
 
-module.exports = { getNoticias, getUltimasNoticias };
+const getNoticia = async (id) => {
+    const noticia = Model.findById(id);
+    return noticia;
+};
+
+module.exports = { getNoticias, getUltimasNoticias, getNoticia };

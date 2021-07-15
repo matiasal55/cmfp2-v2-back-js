@@ -1,4 +1,4 @@
-const { noticiasList, noticiasLastItems } = require('../services/noticias.services');
+const { noticiasList, noticiasLastItems, noticia } = require('../services/noticias.services');
 
 const getNoticias = async (req, res) => {
     const noticias = await noticiasList();
@@ -10,4 +10,10 @@ const getUltimasNoticias = async (req, res) => {
     res.json(noticias);
 };
 
-module.exports = { getNoticias, getUltimasNoticias };
+const getNoticia = async (req, res) => {
+    const { id } = req.params;
+    const request = await noticia(id);
+    res.json(request);
+};
+
+module.exports = { getNoticias, getUltimasNoticias, getNoticia };
