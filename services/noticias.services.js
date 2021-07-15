@@ -1,5 +1,7 @@
-const noticiasList = () => {
-    const noticias = [{ texto: 'prueba desde service' }];
+const { getNoticias } = require('../repositories/noticias.repository');
+
+const noticiasList = async () => {
+    const noticias = await getNoticias();
     return noticias;
 };
 
