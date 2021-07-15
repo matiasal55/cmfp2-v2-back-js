@@ -1,5 +1,4 @@
 const express = require('express');
-const logger = require('morgan');
 const cors = require('cors');
 const { error } = require('./services/messages/error');
 const cursosRouter = require('./routes/cursos.routes');
@@ -12,7 +11,6 @@ app.use(
     })
 );
 app.use(cors());
-app.use(logger('dev'));
 
 app.use('/cursos', cursosRouter);
 
