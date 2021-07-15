@@ -1,4 +1,4 @@
-const { getCursosEspecialidades, getCursoEspecialidades } = require('../repositories/cursos.repository');
+const { getCursosEspecialidades, getCursoEspecialidades, getCursosTaller, getCursoTaller } = require('../repositories/cursos.repository');
 
 const especialidadesList = async () => {
     const cursos = await getCursosEspecialidades();
@@ -10,4 +10,14 @@ const especialidadesItem = async (id) => {
     return cursos;
 };
 
-module.exports = { especialidadesList, especialidadesItem };
+const talleresList = async () => {
+    const cursos = await getCursosTaller();
+    return cursos;
+};
+
+const talleresItem = async (id) => {
+    const cursos = await getCursoTaller(id);
+    return cursos;
+};
+
+module.exports = { especialidadesList, especialidadesItem, talleresList, talleresItem };
