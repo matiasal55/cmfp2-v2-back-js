@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const { error } = require('./services/messages/error');
-const cursosRouter = require('./routes/cursos.routes');
+const cursosRouter = require('./routes/cursos/index.routes');
 const noticiasRouter = require('./routes/noticias.routes');
 const app = express();
 
