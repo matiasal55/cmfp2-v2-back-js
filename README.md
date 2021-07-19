@@ -32,7 +32,7 @@ Inicia la API para poder consultar la información deseada. La url local es http
 
 Inicia la API en modo desarrollador con Nodemon.
 
-**Nota:** La API contiene variables de entorno vinculadas al puerto usado y a la base de datos de MongoDB deseadas. Para su commodidad, puede ser las siguientes:
+**Nota:** La API contiene variables de entorno vinculadas al puerto usado y a la base de datos de MongoDB deseadas. Para su comodidad, los valores pueden ser los siguientes:
 
 **PORT:** 4000 (igualmente la API designa el puerto 4000 en caso de no hallar el valor de la variable).
 
