@@ -11,7 +11,7 @@ const getUltimasNoticias = async () => {
 };
 
 const getNoticia = async (id) => {
-    const noticia = Model.findById(id);
+    const noticia = Model.findOne({ id });
     return noticia;
 };
 
