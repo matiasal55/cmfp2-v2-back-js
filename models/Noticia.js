@@ -1,19 +1,27 @@
 const { Schema, model } = require('mongoose');
 
 const noticiaSchema = new Schema({
-    titulo: {
+    id: {
+        type: Number,
+        unique: true,
+    },
+    title: {
         type: String,
         required: true,
     },
-    subtitulo: {
+    subtitle: {
         type: String,
         required: true,
     },
-    texto: {
+    content: {
         type: String,
         required: true,
     },
     photos: Array,
+    mainImage: {
+        type: String,
+        required: true,
+    },
 });
 
 const noticiaModel = model('noticias', noticiaSchema);
